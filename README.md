@@ -8,11 +8,11 @@
 ## Getting Started
 
 ```
-yarn install privateprops
+yarn install privateobject
 
-const privateProps = require('privateprops');
+const p = require('privateobject');
 
-const myObject = privateProps({});
+const myObject = p({});
 
 myObject.dog = 'Fido';
 console.log(myObject);
@@ -27,7 +27,7 @@ console.log(myObject.dog);
 #### Works with any objects, included classes
 
 ```
-const privateProps = require('privateprops');
+const p = require('privateobject');
 
 class Person {
   constructor(name) {
@@ -35,7 +35,7 @@ class Person {
   }
 }
 
-const me = privateProps(new Person('Rob')); //Any properties defined hereafter are private
+const me = p(new Person('Rob')); //Any properties defined hereafter are private
 
 ```
 #### Object keeps prototype

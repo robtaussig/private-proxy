@@ -1,6 +1,7 @@
 {
-  "name": "privateprops",
+  "name": "privateobject",
   "version": "0.0.1",
+  "private": false,
   "description": "Convert any object into one that supports private properties, using the familiar Object API for getting and setting keys.",
   "main": "index.js",
   "scripts": {
@@ -8,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/robtaussig/privateprops.git"
+    "url": "git+https://github.com/robtaussig/privateobject.git"
   },
   "keywords": [
     "node",
@@ -22,9 +23,9 @@
   "author": "Robert Taussig",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/robtaussig/privateprops/issues"
+    "url": "https://github.com/robtaussig/privateobject/issues"
   },
-  "homepage": "https://github.com/robtaussig/privateprops#readme",
+  "homepage": "https://github.com/robtaussig/privateobject#readme",
   "devDependencies": {
     "mocha": "^5.1.1"
   }
