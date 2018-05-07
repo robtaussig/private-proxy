@@ -18,7 +18,8 @@
     "properties",
     "private",
     "get",
-    "set"
+    "set",
+    "proxy"
   ],
   "author": "Robert Taussig",
   "license": "MIT",
