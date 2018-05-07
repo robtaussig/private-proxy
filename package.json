@@ -1,5 +1,5 @@
 {
-  "name": "privateobject",
+  "name": "private-proxy",
   "version": "0.0.1",
   "private": false,
   "description": "Convert any object into one that supports private properties, using the familiar Object API for getting and setting keys.",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/robtaussig/privateobject.git"
+    "url": "git+https://github.com/robtaussig/private-proxy.git"
   },
   "keywords": [
     "node",
@@ -23,9 +23,9 @@
   "author": "Robert Taussig",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/robtaussig/privateobject/issues"
+    "url": "https://github.com/robtaussig/private-proxy/issues"
   },
-  "homepage": "https://github.com/robtaussig/privateobject#readme",
+  "homepage": "https://github.com/robtaussig/private-proxy#readme",
   "devDependencies": {
     "mocha": "^5.1.1"
   }

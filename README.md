@@ -8,11 +8,11 @@
 ## Getting Started
 
 ```
-yarn install privateobject
+yarn install private-proxy
 
-const p = require('privateobject');
+const pp = require('private-proxy');
 
-const myObject = p({});
+const myObject = pp({});
 
 myObject.dog = 'Fido';
 console.log(myObject);
@@ -27,7 +27,7 @@ console.log(myObject.dog);
 #### Works with any objects, included classes
 
 ```
-const p = require('privateobject');
+const pp = require('private-proxy');
 
 class Person {
   constructor(name) {
@@ -35,7 +35,7 @@ class Person {
   }
 }
 
-const me = p(new Person('Rob')); //Any properties defined hereafter are private
+const me = pp(new Person('Rob')); //Any properties defined hereafter are private
 
 ```
 #### Object keeps prototype
