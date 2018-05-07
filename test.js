@@ -1,11 +1,11 @@
-const p = require('./index.js');
+const pp = require('./index.js');
 const assert = require('assert');
     
 describe('PrivateProps', () => {
   it('does not affect properties that were defined before conversion', () => {
     const myObj = {};
     myObj.name = 'Robert';
-    const privateObj = p(myObj);
+    const privateObj = pp(myObj);
     
     assert(privateObj.name === 'Robert', 'Public property is accessible directly');
     assert(Object.keys(privateObj).find(key => key === 'name'), 'Public properties are enumerable');
@@ -15,7 +15,7 @@ describe('PrivateProps', () => {
   });
 
   it('locks an object upon conversion, so that all keys defined thereafter are considered private', () => {
-    const privateObj = p({});
+    const privateObj = pp({});
     privateObj.name = 'Rob';
     privateObj.name = 'Joey';
 
@@ -29,7 +29,7 @@ describe('PrivateProps', () => {
         this.name = name;
       }
     }
-    const privateAnimal = p(new Animal('Fido'));
+    const privateAnimal = pp(new Animal('Fido'));
 
     assert(privateAnimal instanceof Animal, 'Class instance is unchanged');
     assert(privateAnimal.name === 'Fido', 'Class attributes are unaffected');
@@ -48,23 +48,8 @@ describe('PrivateProps', () => {
     const myObj = {
       name: 'Rob'
     };
-    const privateObj = p(myObj);
+    const privateObj = pp(myObj);
     privateObj.age = 25;
     assert(Object.keys(privateObj).length === 1 && Object.keys(privateObj)[0] === 'name', 'Only public properties are enumerable');
   });
-})
-
-// console.log(myObj);
-// let myObj2 = {};
-// console.log(myObj2);
-// myObj.name = 'Rob';
-// console.log(myObj);
-// myObj2.name = 'Rob';
-// console.log(myObj2);
-// myObj2 = privateProps(myObj2);
-// console.log(myObj2, myObj2.name);
-// myObj.name = 'Joey';
-// console.log(myObj, myObj.name);
-// myObj2.name = 'Joey';
-// console.log(myObj2.name);
-// console.log(myObj.name);
+});

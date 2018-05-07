@@ -2,7 +2,6 @@
 
 - Convert any object into one that supports private, immutable properties.
 - Leverages the Proxy object.
-- Objects retain original prototype.
 - Objects are inspectable, and non-private properties are mutable/inspectable.
 
 ## Getting Started
@@ -24,7 +23,7 @@ console.log(myObject.dog);
 
 ## Examples
 
-#### Works with any objects, included classes
+#### Works with any objects, including classes
 
 ```
 const pp = require('private-proxy');
